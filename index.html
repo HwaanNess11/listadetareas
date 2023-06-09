@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./statics/styles/index.css">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <h2 class="navbar-brand" href="#">Lista de tareas pendientes</h2>
+        </div>
+    </nav>
+
+    <div id="tareas">
+        <div id="ingr-tar">
+            <h4>Ingresa una nueva tarea</h4>
+            <form method="post" id="formAgregar">
+                <input type="text" class="form-label" placeholder="Tarea" id="desc_tarea"/>
+                <br>
+                <select class="form-label" id="mater">
+                    <option value="ad" selected>Materia</option>
+                    <option value="otra">Otra</option>
+                </select>
+                <div id="nuevMat"></div>
+                <button type="reset" class="btn btn-primary" id="btn-agr">Agregar</button>
+                <br>
+                <button type="reset" class="btn btn-secondary" id="btn-brr">Borrar</button>
+            </form>
+        </div>
+        <div id="most-tar">
+            <h1>📋 Lista de tareas 📋</h1><br>
+            <div class="tarea" id="noreg">Sin tareas pendientes</div>
+            <!-- <div class="tarea">
+                <div class="parte" id="desc"><p>Materia : Desc de la tarea</p></div>
+                <div class="parte" id="botones">
+                    <div class="boton">Completada</div>
+                    <div class="boton">Borrar</div>
+                </div>
+            </div> -->
+            <div id="ingresar"></div>
+        </div>
+        <div id="cont-tar">
+            <h4>Tareas Totales</h4>
+            <div id="tot">0</div>
+            <br>
+            <h4>Tareas completadas</h4>
+            <div id="compl">0</div>
+        </div>
+    </div>
+    <script src="dynamics/script.js"></script>
+</body>
+</html>
